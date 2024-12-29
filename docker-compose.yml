@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    volumes:
+      - /Users/priya/Documents/ZaniaProject/zaniawebapp/mockServiceWorker.js:/usr/share/nginx/html/mockServiceWorker.js
+    environment:
+      - NODE_ENV=production
